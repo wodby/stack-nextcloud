@@ -12,7 +12,7 @@ composition for Nextcloud.
 
 ## Service definitions
 
-- [Nextcloud service](https://github.com/wodby/service-nextcloud)
+- Nextcloud service (`nextcloud`)
 - [PostgreSQL service](https://github.com/wodby/service-postgres)
 - [Redis service](https://github.com/wodby/service-redis)
 - [OpenSMTPD service](https://github.com/wodby/service-opensmtpd)
