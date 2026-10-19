@@ -41,8 +41,8 @@ app is created. Required services cannot be excluded.
 
 ## Deploy this stack
 
-Create an app from the Nextcloud stack, then provide a strong initial
-administrator password. The administrator username defaults to `admin`.
+Create an app from the Nextcloud stack, then provide the initial administrator
+username, for example `admin`, and a strong password.
 
 Review the selected Nextcloud version, storage sizes, and optional SMTP service
 when creating the application. The same stack can be reused across development,
