@@ -1,0 +1,38 @@
+name: nextcloud
+icon: nextcloud
+title: Nextcloud
+
+services:
+- name: nextcloud
+  title: Nextcloud
+  service: nextcloud
+  required: true
+  main: true
+  links:
+  - name: postgres
+    service: postgres
+  - name: redis
+    service: redis
+  - name: sendmail
+    service: opensmtpd
+  volumes:
+  - name: data
+    size: 50
+
+- name: postgres
+  title: PostgreSQL
+  service: postgres
+  required: true
+  volumes:
+  - name: data
+    size: 20
+
+- name: redis
+  title: Redis
+  service: redis
+  required: true
+
+- name: opensmtpd
+  title: OpenSMTPD
+  service: opensmtpd
+  required: false
