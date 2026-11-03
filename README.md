@@ -23,7 +23,7 @@ composition for Nextcloud.
 | --- | --- |
 | Nextcloud<br>`nextcloud` | required; main service; `data` volume 50 GB; links to PostgreSQL, Redis, and OpenSMTPD |
 | PostgreSQL<br>`postgres` | required; `data` volume 20 GB |
-| Redis<br>`redis` | required; used for cache and transactional file locking |
+| Redis<br>`redis` | required; used for cache, sessions, and transactional file locking; 512 MB, never evicts keys |
 | OpenSMTPD<br>`opensmtpd` | optional; enabled by default for outgoing email |
 
 The Nextcloud service uses the official Nextcloud Apache image and the upstream
