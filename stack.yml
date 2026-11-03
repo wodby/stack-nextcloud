@@ -32,6 +32,12 @@ services:
   title: Redis
   service: redis
   required: true
+  # Nextcloud keeps file locks and sessions in this Redis, so it must never evict keys.
+  env:
+  - name: REDIS_MAXMEMORY
+    value: 512mb
+  - name: REDIS_MAXMEMORY_POLICY
+    value: noeviction
 
 - name: opensmtpd
   title: OpenSMTPD
